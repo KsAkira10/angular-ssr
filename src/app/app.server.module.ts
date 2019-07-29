@@ -8,16 +8,14 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UniversalInterceptor } from './universal-interceptor';
 
 @NgModule({
-  imports: [
-    AppModule,
-    ServerModule,
-    ModuleMapLoaderModule,
-  ],
+  imports: [AppModule, ServerModule, ModuleMapLoaderModule],
   bootstrap: [AppComponent],
-  providers: [{
-    provide: HTTP_INTERCEPTORS,
-    useClass: UniversalInterceptor,
-    multi: true
-  }],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: UniversalInterceptor,
+      multi: true
+    }
+  ]
 })
 export class AppServerModule {}
