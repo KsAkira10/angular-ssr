@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { PreloaderModule } from '@neon-pagamentos/neon-components';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { PreloaderModule } from '@neon-pagamentos/neon-components';
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     PreloaderModule,
+    SharedModule,
     AppRoutingModule
   ],
   providers: [],
