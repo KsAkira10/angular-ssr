@@ -12,7 +12,9 @@
     "serve:ssr": "node dist/server",
     "build:ssr": "npm run build:client-and-server-bundles && npm run compile:server",
     "start:ssr": "npm run build:ssr && npm run serve:ssr",
-    "build:client-and-server-bundles": "ng build --prod && ng run angular-ssr:server:production --bundleDependencies all"
+    "build:client-and-server-bundles": "ng build --prod && ng run angular-ssr:server:production --bundleDependencies all",
+    "docker:build:ssr": "docker build --rm -f \"SSR.Dockerfile\" -t angular-ssr:latest .",
+    "docker:build:csr": "docker build --rm -f \"CSR.Dockerfile\" -t angular-csr:latest ."
   },
   "private": true,
   "dependencies": {
